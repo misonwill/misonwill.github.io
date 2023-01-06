@@ -1,3 +1,5 @@
+document.getElementById("year").innerHTML = new Date().getFullYear();
+
 function menuToggle() {
     var toggle = document.getElementById("menu_toggle");
     var menu = document.getElementById("mobile_menu");
