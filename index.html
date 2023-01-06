@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/footer-logo.svg">
+    <title>William Mison | Web Developer and Designer</title>
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/icons/css/icon-page.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Nunito:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page-wrapper">
+        <div id="contents">
+            <!-- header navigation -->
+            <div class="header-navigation">
+                <div class="logo-wrapper">
+                    <img class="logo" src="/assets/img/logo.svg" alt="william mison logo">
+                </div>
+                <div class="menu-wrapper">
+                    <ul class="menu">
+                        <li class="menu-item"><a href="/about.html"><i class="mdi mdi-account-circle"></i>About Me</a></li>
+                        <li class="menu-item"><a href="/work.html"><i class="mdi mdi-briefcase"></i>Work</a></li>
+                        <li class="menu-item"><a href="/assets/files/resume.pdf"><i class="mdi mdi-file-document"></i>Resume</a></li>
+                    </ul>
+                    <!-- mobile toggle -->
+                    <input type="checkbox" id="menu_toggle" onclick="menuToggle()">
+                    <label class="menu" for="menu_toggle">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </label>
+                </div>
+                <div class="mobile-menu" id="mobile_menu">
+                    <div class="menu-wrapper">
+                        <ul class="menu">
+                            <li class="menu-item"><a href="/about.html"><i class="mdi mdi-account-circle"></i>About Me</a></li>
+                            <li class="menu-item"><a href="/work.html"><i class="mdi mdi-briefcase"></i>Work</a></li>
+                            <li class="menu-item"><a href="/assets/files/resume.pdf"><i class="mdi mdi-file-document"></i>Resume</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- banner -->
+            <div class="banner section">
+                <div class="grid-2">
+                    <div class="grid-left home-left">
+                        <div class="bubble">
+                            Hi! it’s me!
+                        </div>
+                        <h1>William Mison</h1>
+                        <h3>Web developer and Designer</h3>
+                        <p>Creative developer from Philippines.<br>I design and code simple yet professional.</p>
+                        <a class="btn" href="mailto:misonwilliam@gmail.com">Contact Me!</a>
+                    </div>
+                    <div class="grid-right home-right">
+                        <img src="/assets/img/william-mison-portrait.png" alt="william mison portrait">
+                    </div>
+                </div>
+            </div>
+            <!-- email and tagline -->
+            <div class="tagline">
+                <h2>Bringing amazing ideas to Life!</h2>
+                <a href="mailto:misonwilliam@gmail.com"><i class="mdi mdi-email-outline"></i>misonwilliam@gmail.com</a>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <footer>
+        <img class="logo" src="/assets/img/footer-logo.svg" alt="william mison footer logo">
+        <h5>William Mison</h5>
+        <span>Olongapo | Philippines</span>
+        <div class="footer-icons">
+            <a href="mailto:misonwilliam@gmail.com"><i class="mdi mdi-send"></i></a>
+            <a href="mailto:misonwilliam@gmail.com"><i class="mdi mdi-linkedin"></i></a>
+        </div>
+        <hr>
+        <span class="copyright">© 2023 William Mison. All rights reserved</span>
+    </footer>
+    <!-- scripts -->
+    <script src="/assets/js/script.js"></script>
+</body>
+</html>
