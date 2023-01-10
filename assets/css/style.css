@@ -161,6 +161,44 @@ div#contents{
 .reverse-grid-md > .grid-right{
     order: 1;
 }
+.tooltip{
+    position: relative;
+}
+.tooltip:hover::before, .tooltip:hover::after{
+    display: block;
+}
+.tooltip::before{
+    content: attr(tooltip);
+    position: absolute;
+    top: -30px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    width: fit-content;
+    display: none;
+    background: var(--dark);
+    color: var(--light);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-family: var(--copy-font-family);
+    font-size: 12px;
+    animation: pop 0.5s linear 1;
+}
+.tooltip::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    left: 0;
+    width: fit-content;
+    margin: auto;
+    top: -6px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid var(--dark);
+    display: none;
+    animation: pop 0.5s linear 1;
+}
 /* header */
 .header-navigation{
     display: flex;
