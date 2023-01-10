@@ -185,7 +185,7 @@ div#contents{
     font-size: 12px;
     animation: pop 0.5s linear 1;
 }
-.tooltip::after {
+/* .tooltip::after {
     content: '';
     position: absolute;
     right: 0;
@@ -198,7 +198,7 @@ div#contents{
     border-top: 6px solid var(--dark);
     display: none;
     animation: pop 0.5s linear 1;
-}
+} */
 /* header */
 .header-navigation{
     display: flex;
