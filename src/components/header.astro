@@ -1,0 +1,34 @@
+---
+import logo from '../images/logo.svg';
+---
+<!-- header navigation -->
+<div class="header-navigation">
+    <div class="logo-wrapper">
+        <a href="/"><img class="logo" src={ logo } alt="william mison logo"></a>
+    </div>
+    <div class="menu-wrapper">
+        <ul class="menu">
+            <li class="menu-item"><a href="/"><i class="mdi mdi-home"></i>Home</a></li>
+            <li class="menu-item"><a href="/about"><i class="mdi mdi-account-circle"></i>About Me</a></li>
+            <li class="menu-item"><a href="/work"><i class="mdi mdi-briefcase"></i>Work</a></li>
+            <li class="menu-item"><a href="/assets/files/resume.pdf" target="_blank"><i class="mdi mdi-file-document"></i>Resume</a></li>
+        </ul>
+        <!-- mobile toggle -->
+        <input type="checkbox" id="menu_toggle">
+        <label class="menu" for="menu_toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </label>
+    </div>
+    <div class="mobile-menu" id="mobile_menu">
+        <div class="menu-wrapper">
+            <ul class="menu">
+                <li class="menu-item"><a href="/"><i class="mdi mdi-home"></i>Home</a></li>
+                <li class="menu-item"><a href="/about"><i class="mdi mdi-account-circle"></i>About Me</a></li>
+                <li class="menu-item"><a href="/work"><i class="mdi mdi-briefcase"></i>Work</a></li>
+                <li class="menu-item"><a href="/assets/files/resume.pdf" target="_blank"><i class="mdi mdi-file-document"></i>Resume</a></li>
+            </ul>
+        </div>
+    </div>
+</div>

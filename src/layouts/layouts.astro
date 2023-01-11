@@ -1,0 +1,54 @@
+---
+import '../styles/global.css';
+import '../styles/icons/css/icon-page.css';
+import Header from '../components/header.astro';
+import footer_logo from '../images/footer-logo.svg';
+const { title } = Astro.props
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="16x16" href={footer_logo}>
+    <title>{ title } | William Mison - Web Developer and Designer</title>
+
+    <meta name="description" content="Creative developer and design from Philippines."/>
+    <meta property="og:locale" content="en_US"/>
+	<meta property="og:type" content="website"/>
+    <meta property="og:title" content="William Mison | Web Developer and Designer"/>
+    <meta property="og:description" content="Creative developer and design from Philippines."/>
+    <meta property="og:url" content="https://misonwill.github.io/"/>
+    <meta property="og:site_name" content="William Mison, Web Developer and Designer" />
+    <meta property="og:image" content="https://misonwill.github.io//assets/img/william-mison.jpg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Nunito:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page-wrapper">        
+        <div id="contents">
+            
+            <Header/>
+            <slot/>
+
+        </div>
+    </div>
+    <footer>
+        <img class="logo" src={footer_logo} alt="william mison footer logo">
+        <h5>William Mison</h5>
+        <span>Olongapo | Philippines</span>
+        <div class="footer-icons">
+            <a href="mailto:misonwilliam@gmail.com"><i class="mdi mdi-send"></i></a>
+            <a href="https://www.linkedin.com/in/william-mison-1b975a122/" target="_blank"><i class="mdi mdi-linkedin"></i></a>
+        </div>
+        <hr>
+        <span class="copyright">© <span id="year"></span> William Mison. All rights reserved</span>
+    </footer>
+    <!-- scripts -->
+    <script src="../scripts/script.js"></script>
+</body>
+</html>
