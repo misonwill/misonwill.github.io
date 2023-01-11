@@ -44,7 +44,7 @@ h2{
     font-weight: 700;
 }
 h3{
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 700;
 }
 .intro-heading{
@@ -185,20 +185,10 @@ div#contents{
     font-size: 12px;
     animation: pop 0.5s linear 1;
 }
-/* .tooltip::after {
-    content: '';
-    position: absolute;
-    right: 0;
-    left: 0;
-    width: fit-content;
-    margin: auto;
-    top: -6px;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-top: 6px solid var(--dark);
-    display: none;
-    animation: pop 0.5s linear 1;
-} */
+hr.spacer {
+    height: 50px;
+    border: none;
+}
 /* header */
 .header-navigation{
     display: flex;
@@ -246,6 +236,15 @@ ul.menu{
 }
 .logo-grid img{
     height: 60px;
+}
+.logo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+}
+.logo-grid .tooltip{
+    display: flex;
+    justify-content: center;
 }
 button {
     display: block;
@@ -478,6 +477,26 @@ button {
     display: flex;
     align-items: center;
 }
+.about-intro p{
+    margin-bottom: 10px;
+}
+.fun-facts{
+    font-size: 14px;
+    cursor: pointer;
+}
+#hoverText{
+    display: none;
+}
+.fun-facts:hover{
+    animation: fadeEnter 0.3s linear 1;
+}
+.fun-facts:hover #changeHover{
+    display: none;
+}
+.fun-facts:hover #hoverText{
+    display: contents;
+
+}
 @media(min-width: 768px){
     .about img{
         width: 100%;
@@ -534,6 +553,14 @@ button {
 .project-info h5{
     color: var(--light);
 }
+.experience h4{
+    padding-bottom: 10px;
+}
+.experience h3 {
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    padding-bottom: 5px;
+}
 @media(min-width: 768px){
     .work .one-full{
         padding: 0px 60px;
@@ -541,7 +568,28 @@ button {
     .work .projects-grid{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        
+    }
+}
+/* bottom cta */
+.bottom-cta {
+    background: #F2F0EE;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    position: relative;
+    padding: 20px 10px 40px 10px;
+    box-shadow: 0px 4px 10px 0px rgb(0 0 0 / 25%);
+}
+.bottom-cta h1{
+    padding-bottom: 10px;
+}
+.bottom-cta .grid-2{
+    align-items: center;
+}
+@media(min-width: 768px){
+    .bottom-cta {
+        width: 600px;
     }
 }
 /* footer */
@@ -618,7 +666,7 @@ footer .copyright{
     }
     .logo-grid {
         display: grid;
-        grid-template-columns: repeat(8, 1fr);
+        grid-template-columns: repeat(6, 1fr);
     }
 }
 @media(min-width: 1200px){
@@ -639,7 +687,7 @@ footer .copyright{
     }
     .logo-grid {
         display: grid;
-        grid-template-columns: repeat(6, 1fr);
+        grid-template-columns: repeat(12, 1fr);
     }
 }
 /* animation keyframes */
