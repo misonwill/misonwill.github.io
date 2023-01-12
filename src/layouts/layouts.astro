@@ -3,6 +3,7 @@ import '../styles/global.css';
 import '../styles/icons/css/icon-page.css';
 import Header from '../components/header.astro';
 import footer_logo from '../images/footer-logo.svg';
+import og_image from '../images/william-mison.jpg';
 const { title } = Astro.props
 ---
 
@@ -22,7 +23,7 @@ const { title } = Astro.props
     <meta property="og:description" content="Creative developer and design from Philippines."/>
     <meta property="og:url" content="https://misonwill.github.io/"/>
     <meta property="og:site_name" content="William Mison, Web Developer and Designer" />
-    <meta property="og:image" content="https://misonwill.github.io//assets/img/william-mison.jpg" />
+    <meta property="og:image" content={og_image} /> 
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
