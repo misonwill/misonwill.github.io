@@ -587,6 +587,22 @@ button {
 .bottom-cta .grid-2{
     align-items: center;
 }
+.bottom-cta .grid-right {
+    display: flex;
+    flex-direction: column;
+}
+.bottom-cta .grid-right a{
+    margin-top: 15px;
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;;
+}
+.bottom-cta .grid-right a i {
+    font-size: 16px;
+    padding-right: 5px;
+}
 @media(min-width: 768px){
     .bottom-cta {
         width: 600px;
