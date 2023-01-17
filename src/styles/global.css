@@ -398,6 +398,11 @@ button {
     padding-left: 16px;
     padding-bottom: 50px;
 }
+.home-left .btn-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 .home-right{
     display: flex;
     align-items: center;
@@ -461,6 +466,9 @@ button {
     .home-right img{
         max-width: 400px;
     }
+    .home-left .btn-wrapper{
+        flex-direction: row;
+    }
 }
 /* about */
 .about .one-full{
@@ -496,6 +504,14 @@ button {
 .fun-facts:hover #hoverText{
     display: contents;
 
+}
+.work-link {
+    display: flex;
+    border: solid 1px var(--dark);
+    border-bottom: 0;
+    border-right: 0;
+    border-left: 0;
+    padding: 50px 0px;
 }
 @media(min-width: 768px){
     .about img{
