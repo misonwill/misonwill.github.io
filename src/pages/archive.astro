@@ -1,0 +1,45 @@
+---
+import Layout from "../layouts/layouts.astro";
+import CubeHover from "../images/archive/3d Cube Button Hover.jpg"
+import TypingText from "../images/archive/Typing Text Animation.jpg";
+---
+<Layout title="Work">
+    <div class="banner section work">
+        <div class="one-full">
+            <h2 class="intro-heading pad-top-30">Archives</h2>
+            <div class="projects-grid pad-top-30">
+                <div class="project-wrapper">
+                    <img src={CubeHover} alt="3d Cube Button Hover">
+                    <div class="project-info">
+                        <a href="/3d-cube-button">
+                            <h5>3d Cube Button Hover</h5>
+                        </a>
+                    </div>
+                </div>
+                <div class="project-wrapper">
+                    <img src={TypingText} alt="Typing Text Animation">
+                    <div class="project-info">
+                        <a href="/typing-text">
+                            <h5>Typing Text Animation</h5>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="spacer">
+        <div class="one-full">
+            <div class="bottom-cta">
+                <div class="grid-2">
+                    <div class="grid-left">
+                        <h1>Start a project</h1>
+                        <p>Interested in working together?</p>
+                    </div>
+                    <div class="grid-right">
+                        <a class="btn" href="mailto:misonwilliam@gmail.com">Contact Me!</a>
+                        <a href="https://join.skype.com/invite/WniJAaB8z45v" target="_blank"><i class="mdi mdi-skype"></i>live:misonwilliam</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</Layout>

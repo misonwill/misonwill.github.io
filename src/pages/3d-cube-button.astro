@@ -1,0 +1,220 @@
+---
+import Layout from "../layouts/layouts.astro";
+import { Prism } from '@astrojs/prism';
+---
+<Layout title="3d Cube Button Hover">
+    <div class="banner section work">
+        <div class="one-full">
+            <h2 class="intro-heading pad-top-30">3d Cube Button Hover</h2>
+            <div class="pad-top-30">
+                <div class="preview-wrapper">
+                    <a href="#" class="cube">
+                        <div class="front">
+                            Front Side
+                        </div>
+                        <div class="back">
+                            Back Side
+                        </div>
+                    </a>
+                    <hr class="spacer">
+                    <a href="#" class="horizontal-cube">
+                        <div class="left">
+                            Left Side
+                        </div>
+                        <div class="right">
+                            Right Side
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="one-full">
+            <div class="tabs">
+                <ul class="tabs-header">
+                    <li class="default-tab">HTML</li>
+                    <li>CSS</li>
+                </ul>
+                <ul class="tabs-content">
+                    <li class="tab code-tab">
+<Prism lang="html" code={`
+<div class="button-wrapper">
+    <a href="#" class="cube">
+        <div class="front">
+            Front Side
+        </div>
+        <div class="back">
+            Back Side
+        </div>
+    </a>
+    <hr class="spacer">
+    <a href="#" class="horizontal-cube">
+        <div class="left">
+            Left Side
+        </div>
+        <div class="right">
+            Right Side
+        </div>
+    </a>
+</div>`} />
+                    </li>
+                    <li class="tab code-tab">
+<Prism lang="css" code={`
+/* vertical */
+.cube{
+    color: var(--red);
+    font-size: 20px;
+    font-weight: 600;
+    font-family: var(--copy-font-family);
+    width: 200px;
+    height: 50px;
+    transition: transform 0.25s;
+    transform-style: preserve-3d;
+}
+.cube:hover{
+    transform: rotateX(90deg);
+}
+.front, .back{
+    display: grid;
+    place-items: center;
+    height: 50px;
+}
+.front{
+    background: var(--yellow);
+    transform: translateZ(25px);
+}
+.back{
+    background: var(--orange);
+    color: var(--yellow);
+    transform: rotateX(-90deg) translateZ(-25px);
+}
+/* horizontal */
+.horizontal-cube{
+    display: flex;
+    color: var(--red);
+    font-size: 20px;
+    font-weight: 600;
+    font-family: var(--copy-font-family);
+    width: 200px;
+    height: 50px;
+    transition: transform 0.25s;
+    transform-style: preserve-3d;
+}
+.horizontal-cube:hover{
+    transform: rotateY(-90deg);
+}
+.left, .right{
+    display: grid;
+    place-items: center;
+    width: 200px;
+    height: 50px;
+    position: absolute;
+}
+.left{
+    background: var(--yellow);
+    transform: translateZ(100px);
+}
+.right{
+    background: var(--orange);
+    color: var(--yellow);
+    transform: rotateY(90deg) translateZ(100px);
+}
+`}/>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <hr class="spacer">
+        <div class="one-full">
+            <div class="bottom-cta">
+                <div class="grid-2">
+                    <div class="grid-left">
+                        <h1>Start a project</h1>
+                        <p>Interested in working together?</p>
+                    </div>
+                    <div class="grid-right">
+                        <a class="btn" href="mailto:misonwilliam@gmail.com">Contact Me!</a>
+                        <a href="https://join.skype.com/invite/WniJAaB8z45v" target="_blank"><i class="mdi mdi-skype"></i>live:misonwilliam</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</Layout>
+
+<style>
+    .preview-wrapper{
+        min-height: 300px;
+        width: 100%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-color: var(--dark);
+    }
+    /* vertical */
+    .cube{
+        color: var(--red);
+        font-size: 20px;
+        font-weight: 600;
+        font-family: var(--copy-font-family);
+        width: 200px;
+        height: 50px;
+        transition: transform 0.25s;
+        transform-style: preserve-3d;
+
+        margin: 0;
+        text-decoration: none;
+    }
+    .cube:hover{
+        transform: rotateX(90deg);
+    }
+    .front, .back{
+        display: grid;
+        place-items: center;
+        height: 50px;
+    }
+    .front{
+        background: var(--yellow);
+        transform: translateZ(25px);
+    }
+    .back{
+        background: var(--orange);
+        color: var(--yellow);
+        transform: rotateX(-90deg) translateZ(-25px);
+    }
+    /* horizontal */
+    .horizontal-cube{
+        display: flex;
+        color: var(--red);
+        font-size: 20px;
+        font-weight: 600;
+        font-family: var(--copy-font-family);
+        width: 200px;
+        height: 50px;
+        transition: transform 0.25s;
+        transform-style: preserve-3d;
+
+        margin: 0;
+        text-decoration: none;
+    }
+    .horizontal-cube:hover{
+        transform: rotateY(-90deg);
+    }
+    .left, .right{
+        display: grid;
+        place-items: center;
+        width: 200px;
+        height: 50px;
+        position: absolute;
+    }
+    .left{
+        background: var(--yellow);
+        transform: translateZ(100px);
+    }
+    .right{
+        background: var(--orange);
+        color: var(--yellow);
+        transform: rotateY(90deg) translateZ(100px);
+    }
+</style>

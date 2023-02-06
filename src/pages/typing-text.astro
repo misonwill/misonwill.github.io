@@ -1,0 +1,110 @@
+---
+import Layout from "../layouts/layouts.astro";
+import { Prism } from '@astrojs/prism';
+---
+<Layout title="Typing Text Animation">
+    <div class="banner section work">
+        <div class="one-full">
+            <h2 class="intro-heading pad-top-30">Typing Text Animation</h2>
+            <div class="pad-top-30">
+                <div class="preview-wrapper">
+                    <div class="typing-text">
+                        Typing Text Animation using only css!
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="one-full">
+            <div class="tabs">
+                <ul class="tabs-header">
+                    <li class="default-tab">HTML</li>
+                    <li>CSS</li>
+                </ul>
+                <ul class="tabs-content">
+                    <li class="tab code-tab">
+<Prism lang="html" code={`
+<div class="typing-text">
+    Typing Text Animation using only css!
+</div>`} />
+                    </li>
+                    <li class="tab code-tab">
+<Prism lang="css" code={`
+/* typing effect */
+    .typing-text{
+    width: 37ch;
+    animation: typing 2s steps(38), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: monospace;
+    font-size: 20px;
+}
+/* keyfranes animation */
+@keyframes typing{
+    from{
+        width: 0;
+    }
+}
+@keyframes blink {
+    50% {
+        border-color: transparent
+    }
+}
+`}/>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <hr class="spacer">
+        <div class="one-full">
+            <div class="bottom-cta">
+                <div class="grid-2">
+                    <div class="grid-left">
+                        <h1>Start a project</h1>
+                        <p>Interested in working together?</p>
+                    </div>
+                    <div class="grid-right">
+                        <a class="btn" href="mailto:misonwilliam@gmail.com">Contact Me!</a>
+                        <a href="https://join.skype.com/invite/WniJAaB8z45v" target="_blank"><i class="mdi mdi-skype"></i>live:misonwilliam</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</Layout>
+
+<style>
+    .preview-wrapper{
+        min-height: 300px;
+        width: 100%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-color: var(--dark);
+    }
+    /* typing effect */
+    .typing-text{
+        width: 37ch;
+        animation: typing 2s steps(38), blink .5s step-end infinite alternate;
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: 3px solid;
+        font-family: monospace;
+        font-size: 20px;
+
+        color: var(--light);
+    }
+    /* keyfranes animation */
+    @keyframes typing{
+        from{
+            width: 0;
+        }
+    }
+    @keyframes blink {
+        50% {
+            border-color: transparent
+        }
+    }
+</style>
