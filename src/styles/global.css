@@ -156,7 +156,12 @@ div#contents{
 }
 .grid-2{
     display: grid;
-    grid-template-columns: 100%;
+    grid-template-columns: 1fr;
+    gap: 40px; 
+}
+.grid-2-1{
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 40px; 
 }
 .reverse-grid-md > .grid-left{
@@ -723,8 +728,14 @@ footer .copyright{
 @media(min-width: 768px){
     .grid-2{
         display: grid;
-        grid-template-columns: 50% 50%;
+        grid-template-columns: 1fr 1fr;
     }
+
+    .grid-2-1{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+
     div#contents{
         padding: 26px 50px;
         margin-top: 75px;
