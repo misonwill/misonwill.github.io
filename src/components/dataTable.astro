@@ -1,0 +1,55 @@
+---
+const projects = await Astro.glob('../projects/*.md');
+---
+<div id="table-container">
+  <table id="myTable" class="display responsive nowrap" width="100%">
+    <thead>
+      <tr>
+        <th>Project</th>
+        <th>Tech/Platform</th>
+        <th>Elementor</th>
+        <th>Development</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      {projects.map((project) => (
+        <tr>
+          <td>{project.frontmatter.name}</td>
+          <td>{project.frontmatter.tech}</td>
+          <td>{project.frontmatter.elementor ? <span class="yes"></span> : <span class="no"></span>}</td>
+          <td>{project.frontmatter.development}</td>
+          <td>
+            <a class="tbl-view" href={`/${project.frontmatter.slug}`}>View Details</a>
+          </td>
+        </tr>
+      ))}
+      
+      <!-- More table rows -->
+    </tbody>
+  </table>
+</div>
+
+<!-- DataTables and jQuery scripts -->
+<script is:inline src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script is:inline src="https://cdn.datatables.net/2.3.2/js/dataTables.js"></script>
+<script is:inline src="https://cdn.datatables.net/responsive/3.0.4/js/dataTables.responsive.js"></script>
+<script is:inline src="https://cdn.datatables.net/responsive/3.0.4/js/responsive.dataTables.js"></script>
+<script is:inline src="https://cdn.datatables.net/select/3.0.1/js/dataTables.select.js"></script>
+<script is:inline src="https://cdn.datatables.net/select/3.0.1/js/select.dataTables.js"></script>
+<link rel="stylesheet" href="https://cdn.datatables.net/2.3.2/css/dataTables.dataTables.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/responsive/3.0.4/css/responsive.dataTables.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/select/3.0.1/css/select.dataTables.css">
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    if (window.jQuery) {
+      // jQuery is loaded
+      new DataTable('#myTable', {
+          responsive: true,
+          select: true,
+          autoWidth: true
+      });
+    }
+  });
+</script>

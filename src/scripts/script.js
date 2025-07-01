@@ -44,3 +44,20 @@ function createTabs(element) {
 
 // Run
 [...document.querySelectorAll('.tabs')].forEach((x) => createTabs(x));
+
+document.querySelectorAll('.tab-item-btn').forEach(el => {
+  el.addEventListener('click', function(e) {
+    e.preventDefault();
+    // Remove 'active' class from all tab items
+    document.querySelectorAll('.tab-item-btn').forEach(item => {    
+        item.classList.remove('active');
+    });
+     document.querySelectorAll('.tab-item').forEach(item => {    
+        item.classList.remove('active');
+    });
+    const targetId = this.getAttribute('href').substring(1);
+    const targetElement = document.getElementById(targetId);
+    targetElement.classList.add('active');
+    this.classList.toggle('active');
+  });
+});

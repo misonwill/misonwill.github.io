@@ -1,0 +1,42 @@
+---
+import Layout from "../layouts/layouts.astro";
+
+export async function getStaticPaths() {
+  const projects = await Astro.glob('../projects/*.md');
+
+  return projects.map(project => ({
+    params: { slug: project.frontmatter.slug },
+    props: { project}
+  }));
+}
+
+const { Content, frontmatter } = Astro.props.project;
+---
+
+
+<Layout title={frontmatter.name}>
+    <div class="banner section about">
+        <div class="grid-2 banner">
+        <div class="grid-left align-top">
+            <div class="about-intro">
+                <h1 class="mar-bot-30">{frontmatter.name}</h1>
+                <p><b>{frontmatter.purpose}</p>
+                <p><b>Tech/Platform:</b> {frontmatter.tech}</p>
+                <p><b>Link:</b> <a target="_blank" href={frontmatter.link}>{frontmatter.link}</a></p>
+                <p><b>Builder:</b> {frontmatter.builder}</p>
+                <p><b>Figma Designed:</b> {frontmatter.figma ? 'Yes' : 'No' }</p>
+                <p><b>Development:</b> {frontmatter.development}</p>
+                <p><b>Description:</b></p>
+                <Content/>
+            </div>
+        </div>
+        <div class="grid-right">
+            <div class="smartphone">
+                <div class="content">
+                    <iframe src={frontmatter.link} style="transform: scale(0.23);transform-origin: 0 0;width: 430.33%;height: 430.33%;" />
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</Layout>

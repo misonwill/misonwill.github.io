@@ -12,6 +12,11 @@
   },
   "dependencies": {
     "@astrojs/prism": "^2.0.0",
-    "astro": "^1.6.11"
+    "@lemonadejs/modal": "^5.0.0",
+    "astro": "^1.6.11",
+    "datatables.net": "^2.3.2",
+    "datatables.net-dt": "^2.3.2",
+    "jquery": "^3.7.1",
+    "micromodal": "^0.6.1"
   }
 }
