@@ -7,7 +7,7 @@ const projects = await Astro.glob('../projects/*.md');
       <tr>
         <th>Project</th>
         <th>Tech/Platform</th>
-        <th>Elementor</th>
+        <th>Builder</th>
         <th>Development</th>
         <th>Action</th>
       </tr>
@@ -17,7 +17,7 @@ const projects = await Astro.glob('../projects/*.md');
         <tr>
           <td>{project.frontmatter.name}</td>
           <td>{project.frontmatter.tech}</td>
-          <td>{project.frontmatter.elementor ? <span class="yes"></span> : <span class="no"></span>}</td>
+          <td>{project.frontmatter.elementor ? 'Elementor' : project.frontmatter.builder}</td>
           <td>{project.frontmatter.development}</td>
           <td>
             <a class="tbl-view" href={`/${project.frontmatter.slug}`}>View Details</a>
